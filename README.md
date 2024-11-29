@@ -26,7 +26,7 @@ Make sure you have at least 6-7 GB of VRAM available, even with the 4-bit versio
 
 # Examples
 
-The script provides a brief conversation history (can be extended) that is not visible when running the program, but sets the foundation for the model's subsequent generations. If, for example, you want to simulate a patient in a hospital running into House M.D., you could use the conversation_history below:
+The script provides a brief conversation history (can be extended) that is not visible when running the program, but sets the foundation for the model's subsequent generations. If, for example, you want to simulate a patient in a hospital running into House M.D., you could use the conversation_history below (remember to change `"role": "bot"` to `"role": "house"` elsewhere in the script if you do use this):
 
 ```
 conversation_history = [{"role": "user", "content": "Who are you? Holy shit you're House M.D."},
