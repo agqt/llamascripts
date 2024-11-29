@@ -14,7 +14,7 @@ pipe = pipeline(
 
 # Edit the conversation elements to make a foundation of a continuous conversation.
 # These will not be printed when the model is loaded, but the following conversation will append to this history and build along its structure.
-# An example will be provided with structure and outcome.
+# An example is provided in README.md.
 
 conversation_history = [{"role": "user", "content": "CONVERSATION ELEMENT 0"},
     {"role": "bot", "content": "CONVERSATION ELEMENT 1"},
