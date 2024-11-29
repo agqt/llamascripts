@@ -1,9 +1,10 @@
 # LlamaScripts
-Python scripts for continuous text generation out-of-the-box with Llama-3.1-8B-Instruct. Should work with 70B or lower models as well, but untested on different models. All runs locally on your machine.
+Python scripts for continuous text generation out-of-the-box with Llama-3.1-8B-Instruct from huggingface.co. Should work with 70B or lower models as well, but untested on different models. All runs locally on your machine.
 
 It's highly recommended to do all this inside of a python venv.
 
-To run, make sure you have transformers, torch, pipeline, accelerate, and other prerequisites installed like recommended in https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct
+To run, make sure you have `transformers`, `torch`, `pipeline`, `accelerate`, `bitsandbytes`, and other prerequisites installed like recommended in https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct
+A lot of the prerequisites can simply be installed with `pip install huggingface-hub`, then the others I listed above should be installed next.
 
 Follow the instructions to git clone the Llama-3.1-(8/70/xxx)B-Instruct model to a certain directory that you plan to exclusively use for the project.
 
