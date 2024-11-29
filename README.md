@@ -6,21 +6,23 @@ It's highly recommended to do all this inside of a python venv.
 To run, make sure you have `transformers`, `torch`, `pipeline`, `accelerate`, `bitsandbytes`, and other prerequisites installed like recommended in https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct
 A lot of the prerequisites can simply be installed with `pip install huggingface-hub`, then the others I listed above should be installed next.
 
-Follow the instructions to git clone the Llama-3.1-(8/70/xxx)B-Instruct model to a certain directory that you plan to exclusively use for the project.
+Follow the instructions to `git clone` the Llama-3.1-(8/70/xxx)B-Instruct model to a certain directory that you plan to exclusively use for the project.
 
-This script I made is supposed to be the easiest out-of-the-box way to get your model to run on your local graphics card. Shards are usually installed to ~/.cache/huggingface/hub/models--meta-llama--Llama-3.1-8B-Instruct
+This script I made is supposed to be the easiest out-of-the-box way to get your model to run on your local graphics card. Shards are usually installed to `~/.cache/huggingface/hub/models--meta-llama--Llama-3.1-8B-Instruct`
 There are instructions online on how to specify a custom shard directory to save a "snapshot" of the model, crediting Liang-ml at https://www.cnblogs.com/Liang-ml/p/18167156
 
-A successful load of the model should look like:
+A successful load of the model after running my python script should look like:
 
 ```
 (lvenv) gqt@gentoo-linux ~/llama/Llama-3.1-8B-Instruct $ python 5cstest.py 
 `low_cpu_mem_usage` was None, now default to True since model is quantized.
 Loading checkpoint shards: 100%|██████████████████████████████████████████████████████| 4/4 [00:04<00:00,  1.23s/it]
-User: <input text here>
+User: 
 ```
 
-Make sure you have at least 6-7 GB of VRAM available, even with the 4-bit version of the script.
+Where you are able to input text under user. Responses may take a few seconds to generate, depending on how good/bad your graphics card is.
+
+Make sure you have at least 6-7 GB of VRAM available, even with the 4-bit version of the script. Higher bits require more VRAM. I recommend following https://llamaimodel.com/requirements/, and underestimating your graphics card's capabilities, to not run into a "no VRAM available to allocate" error.
 
 # Examples
 
